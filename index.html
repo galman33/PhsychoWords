@@ -1,16 +1,22 @@
-﻿<html manifest="cache.appcache">
+﻿<html manifest="cache.appcache" dir="rtl">
   <head>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="icon.png">
   </head>
   <body style="text-align: center;">
     <h1 id="wordTxt">Hello!</h1>
-    <br>
     <button id="showBtn" onclick="showDefinition()">הצג</button>
     <h2 id="definitionTxt">Hello!</h2>
-    <br>
-    <button onclick="nextWord()">הבא</button>
+    <button onclick="nextWord()">הבא</button><br>
+    <button onclick="increaseScore()">+</button>
+    <b id="scoreTxt"></b>
+    <button onclick="decreaseScore()">-</button>
+    <br>========<br>
+    יחידה:<select id="categorySelectFrom" onselect="shouldRefresh=true"></select>
+    עד:<select id="categorySelectTo" onselect="shouldRefresh=true"></select><br>
+    רמה:<select id="scoreSelectFrom" onselect="shouldRefresh=true"></select>
+    עד:<select id="scoreSelectTo" onselect="shouldRefresh=true"></select>
     <script src="hebrewWords.js"></script>
     <script src="words.js"></script>
   </body>

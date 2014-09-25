@@ -57,7 +57,7 @@ var scoreTexts = ["לא יודע", "קצת יודע", "יודע טוב", "יוד
 
 function isFromCategory(minCategory, maxCategory)
 {
-  return function (item) { return (item.category >= minCategory && item.category <= minCategory ); };
+  return function (item) { return (item.category >= minCategory && item.category <= maxCategory ); };
 }
 
 function isFromScore(minScore, maxScore)
